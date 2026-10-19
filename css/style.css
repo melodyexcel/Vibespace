@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #12081f;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff3d9a;
+}
+
+.navbar nav a {
+  margin-left: 24px;
+  transition: color 0.3s;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #ff3d9a;
+}
+
+/* Hero section */
+.hero {
+  padding: 100px 40px;
+  background: linear-gradient(135deg, #5b1a8f, #12081f);
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.hero h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  margin-bottom: 28px;
+  max-width: 400px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #ff3d9a;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+  background: #ff6bb3;
+  transform: scale(1.05);
+}
+
+/* Mood cards */
+.moods {
+  padding: 60px 40px;
+}
+
+.moods h2 {
+  margin-bottom: 24px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  padding: 60px 20px;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.happy  { background: #ffb703; color: #12081f; }
+.chill  { background: #3ab0ff; color: #12081f; }
+.focus  { background: #8a5cf6; }
+.energy { background: #ff3d9a; }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  opacity: 0.6;
+}
+/* Page title (Discover and Moodboard) */
+.page-title {
+  padding: 50px 40px 20px;
+}
+
+.page-title h1 {
+  font-size: 40px;
+  margin-bottom: 8px;
+}
+
+/* Playlist grid */
+.playlists {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  padding: 30px 40px 60px;
+}
+
+.playlist {
+  background: #1f1233;
+  border-radius: 16px;
+  padding: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.playlist:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(255, 61, 154, 0.3);
+}
+
+.cover {
+  height: 160px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  object-fit: cover;
+  width: 100%
+  
+}
+
+.playlist h3 {
+  margin-bottom: 6px;
+}
+
+.playlist p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.cover1 { background: linear-gradient(135deg, #ffb703, #ff7b00); }
+.cover2 { background: linear-gradient(135deg, #3a0ca3, #7209b7); }
+.cover3 { background: linear-gradient(135deg, #3ab0ff, #4361ee); }
+.cover4 { background: linear-gradient(135deg, #ff3d9a, #f72585); }
+.cover5 { background: linear-gradient(135deg, #06d6a0, #118ab2); }
+.cover6 { background: linear-gradient(135deg, #6c757d, #343a40); }
+/* Moodboard */
+.board {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 30px 40px 60px;
+}
+
+.tile {
+  border-radius: 16px;
+  min-height: 220px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.tile:hover {
+  transform: scale(1.03);
+}
+
+.quote {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.tile-pink   { background: #ff3d9a; }
+.tile-yellow { background: #ffb703; color: #12081f; }
+.tile-blue   { background: #3ab0ff; color: #12081f; }
+.tile-purple { background: #8a5cf6; }
+
+.tile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+/* Phones and small screens */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .navbar nav a {
+    margin: 0 10px;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .moods,
+  .page-title,
+  .playlists,
+  .board {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .page-title h1 {
+    font-size: 30px;
+  }
+}
